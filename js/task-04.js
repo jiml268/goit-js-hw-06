@@ -1,16 +1,21 @@
 const displayTotal = document.getElementById('value');
+let clickDecrement = document.querySelector('button[data-action="decrement"]');
+let clickIncrement = document.querySelector('button[data-action="increment"]');
+
 let counter = 0;
 displayTotal.innerHTML = counter;
 
-let clickDecrement = document.querySelector('button[data-action="decrement"]');
-clickDecrement.addEventListener('click', function(e){
+clickDecrement.addEventListener('click', handleDecrease);
+clickIncrement.addEventListener('click', handleIncrease);
+
+
+function handleDecrease(e){
     counter--
 displayTotal.innerHTML = counter;
-})
+}
 
-let clickIncrement = document.querySelector('button[data-action="increment"]');
-clickIncrement.addEventListener('click', function(e){
+function handleIncrease(e){
     counter++
 displayTotal.innerHTML = counter;
-})
+}
 

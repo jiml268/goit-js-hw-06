@@ -12,15 +12,12 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-let pictureGallary ="";
-for ( let i = 0; i < images.length; i++){
-  pictureGallary += `<li> <img src = "${images[i].url}" alt = "${images[i].alt}"  width = 300px height = 200px class = "imageitem"></li>; `
-}
+let pictureGallary = "";
+const creatPictureGallary = images.map((element) =>{
+  pictureGallary += `<li> <img src = "${element.url}" alt = "${element.alt}"  width = 300px height = 200px class = "imageitem"></li>`
+})
 const subject = document.querySelector('.gallery');
 subject.insertAdjacentHTML("afterbegin",pictureGallary);
-
-
-
 document.getElementsByClassName("gallery")[0].style.listStyleType = "none"; 
 document.getElementsByClassName("gallery")[0].style.display= "flex";
 document.getElementsByClassName("gallery")[0].style.flexWrap= "wrap";

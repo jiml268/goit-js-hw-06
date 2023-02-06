@@ -6,12 +6,12 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
-const addAllli = document.createDocumentFragment();
+const addAllLi = document.createDocumentFragment();
 for ( let ingredient of ingredients){
-const addingredient = document.createElement('li');
-addingredient.innerHTML = ingredient;
-addingredient.className = "item";
-addAllli.appendChild(addingredient);
+const addIngredient = document.createElement('li');
+addIngredient.innerHTML = ingredient;
+addIngredient.className = "item";
+addAllLi.appendChild(addIngredient);
 }
-const ulingredients = document.getElementById('ingredients');
-ulingredients.appendChild(addAllli)
+const ulIngredients = document.getElementById('ingredients');
+ulIngredients.appendChild(addAllLi)
