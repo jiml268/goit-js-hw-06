@@ -11,9 +11,9 @@ form.addEventListener("submit", (event) => {
 
     const myFormDatarm = document.querySelector('form');
     const data = new FormData(myFormDatarm);
-    const zzz = Object.fromEntries(data)
+    const compleatInfo = Object.fromEntries(data)
 
-    console.log(zzz)     
+    console.log(compleatInfo)     
   event.currentTarget.reset();
   }
 })
